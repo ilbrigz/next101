@@ -5,17 +5,13 @@ import Head from "next/head";
 const Post = props => (
 	<Layout>
 		<Head>
-			<title>MyComic | {props.show.name}</title>
+			<title>MyComic | {}</title>
 			<meta
 				name="keywords"
 				content={props.show.summary.replace(/<[/]?p>/g, "")}
 			/>
 			<meta property="og:title" content={props.show.name} />
 			<meta property="og:image" content={props.show.image.medium} />
-			<meta
-				property="og:url"
-				content={`https://api.tvmaze.com/shows/${props.show.id}`}
-			/>
 		</Head>
 
 		<h1>{props.show.name}</h1>
